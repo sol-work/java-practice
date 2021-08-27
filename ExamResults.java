@@ -2,22 +2,23 @@ package com.qa.helloworld;
 
 public class ExamResults {
 
-	public static int physics = 100;
+	public static int physics = 150;
 	public static int chemistry = 120;
 	public static int biology = 110;
 	public static int total;
 	public static int percentage;
 	
 	public static void main(String[] args) {
-		System.out.println("Total score for all exams: " + individualResults() 
-		+ "and your individual results for physics, chemistry, and biology out of 150, respectively are: " 
-				+ physics + ", " + chemistry + ", " + biology + ".");
+		
+		individualResuls();
 		System.out.println("Your overall score is: " + overallPercentageResult() + "%. Well done!" );
 	}
 	
-	public static int individualResults() {
+	public static void individualResuls() {
 		total = physics + chemistry + biology;
-		return total ;
+		System.out.println("Total score for all exams: " + total 
+		+ " and your individual results for physics, chemistry, and biology out of 150 are, respectively: " 
+		+ physics + ", " + chemistry + ", " + biology + ".");
 		
 	}
 	
